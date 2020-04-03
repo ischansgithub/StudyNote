@@ -2,7 +2,10 @@ Linux学习笔记
 ===
 
 
-
+## rar文件的解压
+```shell
+unrar x file.rar
+```
 ##  cp
 
 复制源目录  dir1->目标目录dir2 (dir2不存在)
@@ -19,12 +22,12 @@ cp -r dir1 dir2
 
 
 
-##文件属性
+## 文件属性
 在Linux中第一个字符代表这个文件是目录、文件或链接文件等等。当为[ d ]则是目录，当为[ - ]则是文件；
 
 ![](http://F:\CWW\Material\StudyNote)
 
-##处理目录的常用命令
+## 处理目录的常用命令
     
     ls: 列出目录
     cd：切换目录
@@ -34,10 +37,10 @@ cp -r dir1 dir2
     cp: 复制文件或目录
     rm: 移除文件或目录
 
-##g++
+## g++
 g++ hello_world.cpp -o hello_world.o   :   用g++编译器编译hello_world.cpp 并通过-o的指令输出可执行文件hello_world.o
 
-##touch 与 mkdir
+## touch 与 mkdir
 touch：创建一个文件 ，   文件属性：-rw-rw-r--
 mkdir:创建一个文件夹，   文件属性：drwxrwxr-x
 ##常用命令的含义
