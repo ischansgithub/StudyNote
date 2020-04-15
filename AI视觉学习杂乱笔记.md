@@ -1,3 +1,9 @@
+### torch.nn.Module.eval() 和 torch.nn.Module.train() 的作用
+
+model.train() ：启用 BatchNormalization 和 Dropout
+
+model.eval() ：不启用 BatchNormalization 和 Dropout
+
 ### 进行推理时，GPU显存占满，但是GPU利用率不高
 
 进行分类推理时，发现GPU的显存占满，但是占用率最多到23%，不能达到100%。原因在于我代码实现的方法不对：喂入神经网络的数据是一张一张的。而要想GPU利用率高，就要用tf.concat将多张图片进行拼接，再送入神经网络。
