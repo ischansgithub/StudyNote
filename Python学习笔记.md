@@ -10,6 +10,7 @@ Python学习笔记
  - 格式化输出是这样的：print('my name is %s, my age is %s' %(self.name, self.age))
    而不是：print('my name is %s, my age is %s'，%self.name， %self.age)
  - python2中的file()对应python3中的open()
+ - ''  与 None是不等价的
 
 ## append/extend/insert效率问题
 
