@@ -12,6 +12,10 @@ Python学习笔记
  - python2中的file()对应python3中的open()
  - ''  与 None是不等价的
 
+## collections.defaultdict(  factory_function )
+
+defaultdict的存在是为了解决“访问dict中不存在的Key的时候，不会报错”。这个factory_function可以是list、set、str等等，作用是当key不存在时，返回的是工厂函数的默认值，比如list对应[ ]，str对应的是空字符串，set对应set( )，int对应0，如下举例：
+
 ## append/extend/insert效率问题
 
 python list 中append的效率是最高的。
