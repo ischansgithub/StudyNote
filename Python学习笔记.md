@@ -14,7 +14,8 @@ Python学习笔记
 
 ## collections.defaultdict(  factory_function )
 
-defaultdict的存在是为了解决“访问dict中不存在的Key的时候，不会报错”。这个factory_function可以是list、set、str等等，作用是当key不存在时，返回的是工厂函数的默认值，比如list对应[ ]，str对应的是空字符串，set对应set( )，int对应0，如下举例：
+- defaultdict的存在是为了解决“访问dict中不存在的Key的时候，不会报错”。这个factory_function可以是list、set、str等等，作用是当key不存在时，返回的是工厂函数的默认值，比如list对应[ ]，str对应的是空字符串，set对应set( )，int对应0。
+- Python不支持dict的key为list或dict类型，如 a = [1 ,2,3]，dict[a]是不合法的。
 
 ## append/extend/insert效率问题
 
