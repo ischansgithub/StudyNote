@@ -11,7 +11,19 @@ Python学习笔记
    而不是：print('my name is %s, my age is %s'，%self.name， %self.age)
  - python2中的file()对应python3中的open()
  - ''  与 None是不等价的
-
+## set用来求交集
+```python
+valid = set(['yellow', 'red',	'blue',	'green', 'black']) 
+input_set=set(['red', 'brown']) 
+print(input_set.intersection(valid)) 
+#输出: set(['red'])
+```
+## 内置函数reduce用来计算一个List的和、积
+```Python
+from functools import reduce 
+product	= reduce((lambdax, y: x	* y), \[1, 2, 3,4\]) 
+# Output:24
+```
 ## collections.defaultdict(  factory_function )
 
 - defaultdict的存在是为了解决“访问dict中不存在的Key的时候，不会报错”。这个factory_function可以是list、set、str等等，作用是当key不存在时，返回的是工厂函数的默认值，比如list对应[ ]，str对应的是空字符串，set对应set( )，int对应0。
