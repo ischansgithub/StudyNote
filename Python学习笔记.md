@@ -11,6 +11,10 @@ Python学习笔记
    而不是：print('my name is %s, my age is %s'，%self.name， %self.age)
  - python2中的file()对应python3中的open()
  - ''  与 None是不等价的
+ 
+## 关键字：nonlocal
+在闭包的情况下，内部函数如果要修改外部变量的值，需要将变量声明为 nonlocal
+
 ## set用来求交集
 ```python
 valid = set(['yellow', 'red',	'blue',	'green', 'black']) 
