@@ -11,7 +11,53 @@ Python学习笔记
    而不是：print('my name is %s, my age is %s'，%self.name， %self.age)
  - python2中的file()对应python3中的open()
  - ''  与 None是不等价的
- 
+
+## functools.lru_cache:实现Python的记忆化
+[参考链接]: https://www.cnblogs.com/cuiyubo/p/8375859.html
+leetcode关于lru_cache的实战：https://leetcode-cn.com/problems/target-sum/solution/dong-tai-gui-hua-by-powcai-22/
+```python
+# 多次调用递归会很慢
+def fibonacci(n):
+    if n==1:
+        return 1
+    elif n==2:
+        return 1
+    elif n>2:
+        return fibonacci(n-1)+fibonacci(n-2)
+
+for i in range(1,101):
+    print(i,":",fibonacci(i)) 
+
+
+# 解决办法1：记忆法
+fibonacci_dic={}
+
+def fibonacci(n):
+    if n in fibonacci_dic:
+        return fibonacci_dic[n]
+    if n==1:
+        value= 1
+    elif n==2:
+        value= 1
+    elif n>2:
+        value=fibonacci(n-1)+fibonacci(n-2)
+    fibonacci_dic[n]=value
+    return value
+
+for i in range(1,101):
+    print(i,":",fibonacci(i))
+
+# 解决办法2:装饰符
+from functools import lru_cache
+@lru_cache(maxsize=1000)
+def fibonacci(n):
+    if n==1:
+        return 1
+    elif n==2:
+        return 1
+    elif n>2:
+        return fibonacci(n-1)+fibonacci(n-2)
+```
 ## 关键字：nonlocal
 在闭包的情况下，内部函数如果要修改外部变量的值，需要将变量声明为 nonlocal
 
