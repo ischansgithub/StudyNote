@@ -13,7 +13,7 @@ Python学习笔记
  - ''  与 None是不等价的
 
 ## functools.lru_cache:实现Python的记忆化
-[参考链接]: https://www.cnblogs.com/cuiyubo/p/8375859.html
+理解lru_cache的参考链接: https://www.cnblogs.com/cuiyubo/p/8375859.html
 leetcode关于lru_cache的实战：https://leetcode-cn.com/problems/target-sum/solution/dong-tai-gui-hua-by-powcai-22/
 ```python
 # 多次调用递归会很慢
