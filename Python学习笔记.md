@@ -12,7 +12,35 @@ Python学习笔记
  - python2中的file()对应python3中的open()
  - ''  与 None是不等价的
 
+## and 和 or
+
+判断变量是否为0， 是0则为False，非0判断为True，
+
+- and中含0，返回0； 均为非0时，返回后一个值， 
+  2 and 0   # 返回0
+  2 and 1   # 返回1
+  1 and 2   # 返回2
+
+- or中， 至少有一个非0时，返回第一个非0,
+  2 or 0   # 返回2
+  2 or 1   # 返回2
+  0 or 1   # 返回1 
+
+- ```python
+  #计算 1+2+3+..+n的值
+  def sumNums(self, n):
+      if n == 0:
+          return 0
+      return self.sumNums(n-1) + n
+  
+      # 上述代码可以替换成
+      return n and self.sumNums(n-1) + n
+  ```
+
+  
+
 ## functools.lru_cache:实现Python的记忆化
+
 理解lru_cache的参考链接: https://www.cnblogs.com/cuiyubo/p/8375859.html
 leetcode关于lru_cache的实战：https://leetcode-cn.com/problems/target-sum/solution/dong-tai-gui-hua-by-powcai-22/
 ```python
